@@ -4,6 +4,7 @@ import { useContext, useState , useEffect } from "react";
 import { ChatContext } from "../context/ChatContext.jsx";
 import { AuthContext } from "../context/AuthContext.jsx";
 import { Link , useParams, useNavigate } from "react-router-dom";
+import qr from '../assets/qr.png'
 
 const Nav = ({ onNewChat , setIsChatStart }) => {
 
@@ -213,7 +214,7 @@ const Nav = ({ onNewChat , setIsChatStart }) => {
                     {IsgetApp && (
                         <div className="p-2 bg-neutral-800 absolute bottom-14 w-44 h-46 -right-38 rounded-xl m-2 cursor-pointer">
                             <div className="hover:bg-black/30 px-3 text-gray-200 py-2 flex items-center gap-2 text-sm font-medium rounded-lg">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTczW_9n3vI3cfsESQpteuo8qmDa93eTj9okg&s" alt="QR Code" className="w-full h-auto" />
+                            <img src={qr} alt="QR Code" className="w-full h-auto" />
                             </div>
                             <p className="text-xs text-gray-300">Scan qr to Download the App</p>
                         </div>
