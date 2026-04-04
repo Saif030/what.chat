@@ -17,6 +17,14 @@ app.use(cors({
 
 app.use(cookieParser());
 
+app.get("/", (req, res) => {
+    res.send("Hello World!");
+});
+
+app.get("/api/v1/health", (req, res) => {
+    res.status(200).json({ status: "ok" });
+});
+
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/chat", chatRouter);
 
