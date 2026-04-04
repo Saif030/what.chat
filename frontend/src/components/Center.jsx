@@ -100,7 +100,7 @@ const Center = ({ isChatStart }) => {
                             }`}
                         >
                             <Brain className="w-4 h-4" />
-                            DeepThink
+                            <span className='hidden sm:block'>DeepThink</span>
                         </button>
                         
                         <button 
@@ -112,7 +112,7 @@ const Center = ({ isChatStart }) => {
                             }`}
                         >
                             <Globe className="w-4 h-4" />
-                            Search
+                            <span className='hidden sm:block'>Search</span>
                         </button>
                     </div>
 

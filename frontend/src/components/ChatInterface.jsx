@@ -200,7 +200,8 @@ const ChatInterface = ({ chatData }) => {
                                     isDeepThink ? 'bg-blue-900/60 border-blue-500 text-blue-200' : 'border-gray-600 text-gray-300 hover:bg-gray-700/50'
                                 }`}
                             >
-                                <Brain className="w-4 h-4" /> DeepThink
+                                <Brain className="w-4 h-4" />
+                                <span className='hidden sm:block'>DeepThink</span>
                             </button>
                             <button
                                 onClick={() => setIsSearch(!isSearch)}
@@ -208,7 +209,8 @@ const ChatInterface = ({ chatData }) => {
                                     isSearch ? 'bg-blue-900/60 border-blue-500 text-blue-200' : 'border-gray-600 text-gray-300 hover:bg-gray-700/50'
                                 }`}
                             >
-                                <Globe className="w-4 h-4" /> Search
+                                <Globe className="w-4 h-4" />
+                                <span className='hidden sm:block'>Search</span>
                             </button>
                         </div>
 

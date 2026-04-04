@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 
 const login = async (data) => {
         try {
-            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/users/login`, data, { withCredentials: true });
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL || ''}/api/v1/users/login`, data, { withCredentials: true });
             return response.data;
         } catch (error) {
             console.log(error);
@@ -15,7 +15,7 @@ const login = async (data) => {
 
 const signup = async (data) => {
     try {
-        const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/users/register`, data, { withCredentials: true });
+        const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL || ''}/api/v1/users/register`, data, { withCredentials: true });
         return response.data;
     } catch (error) {
         console.log(error);
@@ -25,7 +25,7 @@ const signup = async (data) => {
 
 const getUser = async () => {
     try {
-        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/users/me`, { withCredentials: true });
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL || ''}/api/v1/users/me`, { withCredentials: true });
         return response.data;
     } catch (error) {
         console.log(error);
@@ -35,7 +35,7 @@ const getUser = async () => {
 
 const logOut = async () => {
     try {
-        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/users/logout`, { withCredentials: true });
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL || ''}/api/v1/users/logout`, { withCredentials: true });
         return response.data;
     } catch (error) {
         console.log(error);
