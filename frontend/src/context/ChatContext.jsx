@@ -5,7 +5,7 @@ export const ChatContext = createContext();
 
 const models = [
   {
-    "name":"kimi-k4",
+    "name":"kimi-k2",
     "model":"moonshotai/kimi-k2-instruct"
 
   },

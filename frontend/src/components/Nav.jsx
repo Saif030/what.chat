@@ -212,7 +212,7 @@ const Nav = ({ onNewChat , setIsChatStart }) => {
                     )}
 
                     {IsgetApp && (
-                        <div className="p-2 bg-neutral-800 absolute bottom-14 w-44 h-46 -right-38 rounded-xl m-2 cursor-pointer">
+                        <div className="p-2 bg-neutral-800 absolute bottom-14 w-44 h-46 -right-30 rounded-xl m-2 cursor-pointer">
                             <div className="hover:bg-black/30 px-3 text-gray-200 py-2 flex items-center gap-2 text-sm font-medium rounded-lg">
                             <img src={qr} alt="QR Code" className="w-full h-auto" />
                             </div>
