@@ -92,6 +92,7 @@ const ChatInterface = ({ chatData }) => {
     const [open, setOpen] = useState(false);
     const [model , setmodel] = useState(models[0] || '')
     const dropdownRef = useRef();
+    console.log(open)
 
     useEffect(() => {
         const handleClickOutside = (e) => {
@@ -228,10 +229,10 @@ const ChatInterface = ({ chatData }) => {
 
                                 {/* Dropdown */}
                                 {open && (
-                                    <div className="absolute mt-2 right-0 bottom-11 w-40 bg-[#3b3b3b] border border-gray-600 rounded-xl shadow-lg overflow-hidden z-10">
+                                    <div className="absolute mt-2 right-0 bottom-11 w-40 bg-[#3b3b3b] border border-gray-600 rounded-xl shadow-lg overflow-hidden z-10 hover:bg-blue-800">
                                         {
                                             models?.map((item, index) => (
-                                                <div key={index} onClick={() => setmodel(item)} className="px-4 py-2 text-gray-200 text-sm hover:bg-gray-700/50 cursor-pointer">
+                                                <div key={index} onClick={() => {setmodel(item); setOpen(false);}} className="px-4 py-2 text-gray-200 text-sm hover:bg-gray-700/50 cursor-pointer">
                                                     {item?.name}
                                                 </div>
                                             ))

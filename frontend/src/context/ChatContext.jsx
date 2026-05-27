@@ -5,11 +5,6 @@ export const ChatContext = createContext();
 
 const models = [
   {
-    "name":"kimi-k2",
-    "model":"moonshotai/kimi-k2-instruct"
-
-  },
-  {
     "name" : "Mistral",
     "model" : "mistralai/devstral-2-123b-instruct-2512"
   },
@@ -29,6 +24,7 @@ const models = [
 
 const chat = async (chatId, payload , model) => {
     const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/chat/start-chat/${chatId}`, { ...payload, model: model?.model }, { withCredentials: true });
+    console.log(response.data);
     return response.data;
 }
 
