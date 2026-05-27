@@ -39,7 +39,7 @@ const openai = new OpenAI({
 
  const getResponse = async (prompt,model) => {
   const completion = await openai.chat.completions.create({
-    model: model || "moonshotai/kimi-k2-instruct",
+    model: model || "mistralai/mistral-large-3-675b-instruct-2512",
     messages: [{"role":"user","content":prompt}],
     temperature: 1,
     top_p: 0.9,

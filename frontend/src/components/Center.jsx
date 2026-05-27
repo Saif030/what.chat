@@ -132,7 +132,7 @@ const Center = ({ isChatStart }) => {
                                 <div className="absolute mt-2 w-40 bg-[#3b3b3b] border border-gray-600 rounded-xl shadow-lg overflow-hidden z-10">
                                     {
                                         models?.map((item, index) => (
-                                            <div key={index} onClick={() => setmodel(item)} className="px-4 py-2 text-gray-200 text-sm hover:bg-gray-700/50 cursor-pointer">
+                                            <div key={index} onClick={() => {setmodel(item); setOpen(false);}} className="px-4 py-2 text-gray-200 text-sm hover:bg-blue-500 cursor-pointer">
                                                 {item?.name}
                                             </div>
                                         ))
