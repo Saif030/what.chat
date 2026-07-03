@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const allowOrigin = ["http://localhost:5173","https://what-chat-3d22.vercel.app"];
+const allowOrigin = ["http://localhost:5173", "https://whatt-chat.vercel.app"];
 app.use(cors({
     origin: allowOrigin,
     credentials: true
