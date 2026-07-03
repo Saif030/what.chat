@@ -16,7 +16,7 @@ const openai = new OpenAI({
   const completion = await openai.chat.completions.create({
     model: model || "mistralai/mistral-large-3-675b-instruct-2512",
     messages: [{"role":"user","content":prompt}],
-    temperature: 1,
+    temperature: 0.6,
     top_p: 0.9,
     max_tokens: 16384,
     stream: false

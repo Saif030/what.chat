@@ -11,6 +11,10 @@ const models = [
   {
     "name" : "Mistral",
     "model" : "mistralai/mistral-large-3-675b-instruct-2512"
+  },
+  {
+    "name" : "GPT OSS 120B",
+    "model" : "openai/gpt-oss-120b"
   }
 ]
 
